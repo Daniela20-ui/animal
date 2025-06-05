@@ -28,16 +28,26 @@ nav a {
     color: #6989f3;
     padding: 20px;
 }
+.banner img {
+    max-width: 500px;
+    height: auto;
+    margin-top: 15px;
+}
 .section-title {
     font-size: 1.5em;
     font-weight: bold;
     margin: 10px 0;
+    text-align: center;
 }
 .services, .team, .specialists {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 20px 10px;
+}
+.specialists {
+    flex-direction: column;
+    align-items: center;
 }
 .card {
     background-color: #a1d890;
@@ -59,18 +69,55 @@ nav a {
     justify-content: space-around;
     padding: 20px;
     flex-wrap: wrap;
+    border-top: 2px solid #ccc;
+}
+.footer > div {
+    flex: 1;
+    padding: 10px;
+    min-width: 200px;
+    position: relative;
+}
+.footer > div:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
 }
 .footer h3 {
-    color: #000000;
+    color: #080808;
+    margin-bottom: 10px;
 }
-.footer .social-icons img {
-    width: 32px;
-    margin: 0 5px;
+.social-icons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.social-icons a {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000;
+    background-color: #7cb7ee;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.social-icons a:hover {
+    box-shadow: 0 0 12px #ffffff, 0 0 20px #0f0f0f;
+    transform: scale(1.05);
+    background-color: #eee;
 }
 .copyright {
     background-color: #000000;
-    color: rgb(255, 255, 255);
+    color: white;
     text-align: center;
     padding: 10px;
     font-size: 0.9em;
+}
+.services-title {
+    text-align: center;
+    color: #701818;
 }
